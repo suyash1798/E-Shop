@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shop'
+    'shop',
+    'search'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'EcommerceShop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'shop','templates/')],
+        'DIRS': [os.path.join(BASE_DIR, 'shop', 'templates/'),  os.path.join(BASE_DIR,'search','templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
