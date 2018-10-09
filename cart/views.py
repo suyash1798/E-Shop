@@ -116,7 +116,7 @@ def cart_detail(request, total=0, counter=0, cart_items = None):
 					print('The order email has been sent to the customer.')
 				except IOError as e:
 					return e
-				# return redirect('order:thanks', order_details.id)
+				return redirect('order:thanks', order_details.id)
 			except ObjectDoesNotExist:
 				pass
 		except stripe.error.CardError as e:
